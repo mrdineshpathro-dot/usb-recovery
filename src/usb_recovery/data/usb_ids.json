@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "vendors": {
+    "0781": {"name": "SanDisk", "notes": "Common consumer USB flash"},
+    "0951": {"name": "Kingston", "notes": "DataTraveler and similar"},
+    "090c": {"name": "Silicon Motion / generic", "notes": "Many no-name sticks use SM controllers"},
+    "058f": {"name": "Alcor Micro", "notes": "Generic flash bridges"},
+    "1f75": {"name": "Innostor", "notes": "IS917/IS903 bridges"},
+    "05dc": {"name": "Lexar", "notes": ""},
+    "0930": {"name": "Toshiba", "notes": ""},
+    "18a5": {"name": "Verbatim", "notes": ""},
+    "3538": {"name": "PNY", "notes": ""},
+    "13fe": {"name": "Kingston / Phison", "notes": "Phison bridge often behind this ID"},
+    "8564": {"name": "Transcend", "notes": ""},
+    "154b": {"name": "PNY", "notes": ""},
+    "090c:1000": {"name": "Silicon Motion SM3257", "notes": "Very common USB2 stick controller"}
+  }
+}

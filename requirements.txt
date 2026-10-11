@@ -1,0 +1,7 @@
+# USB Recovery Lab — runtime dependencies
+#
+# The core engine, CLI, imaging, parsers, and reports use only the
+# Python 3.11+ standard library. GUI support is optional.
+
+# Desktop interface (feature 141). Omit on headless systems.
+PySide6>=6.6.0

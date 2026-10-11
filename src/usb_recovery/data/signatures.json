@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "signatures": [
+    {
+      "id": "jpeg",
+      "name": "JPEG image",
+      "mime": "image/jpeg",
+      "extensions": ["jpg", "jpeg"],
+      "header_hex": "FFD8FF",
+      "footer_hex": "FFD9",
+      "max_size": 33554432,
+      "validator": "jpeg"
+    },
+    {
+      "id": "png",
+      "name": "PNG image",
+      "mime": "image/png",
+      "extensions": ["png"],
+      "header_hex": "89504E470D0A1A0A",
+      "footer_hex": "49454E44AE426082",
+      "max_size": 33554432,
+      "validator": "png"
+    },
+    {
+      "id": "gif",
+      "name": "GIF image",
+      "mime": "image/gif",
+      "extensions": ["gif"],
+      "header_hex": "474946383961",
+      "footer_hex": "003B",
+      "max_size": 16777216,
+      "validator": null
+    },
+    {
+      "id": "gif87",
+      "name": "GIF87a image",
+      "mime": "image/gif",
+      "extensions": ["gif"],
+      "header_hex": "474946383761",
+      "footer_hex": "003B",
+      "max_size": 16777216,
+      "validator": null
+    },
+    {
+      "id": "bmp",
+      "name": "Windows bitmap",
+      "mime": "image/bmp",
+      "extensions": ["bmp"],
+      "header_hex": "424D",
+      "footer_hex": null,
+      "max_size": 16777216,
+      "validator": "bmp"
+    },
+    {
+      "id": "webp",
+      "name": "WebP image",
+      "mime": "image/webp",
+      "extensions": ["webp"],
+      "header_hex": "52494646",
+      "footer_hex": null,
+      "max_size": 16777216,
+      "validator": "webp"
+    },
+    {
+      "id": "pdf",
+      "name": "PDF document",
+      "mime": "application/pdf",
+      "extensions": ["pdf"],
+      "header_hex": "255044462D",
+      "footer_hex": "2525454F46",
+      "max_size": 33554432,
+      "validator": "pdf"
+    },
+    {
+      "id": "zip",
+      "name": "ZIP archive / OOXML",
+      "mime": "application/zip",
+      "extensions": ["zip", "docx", "xlsx", "pptx"],
+      "header_hex": "504B0304",
+      "footer_hex": "504B0506",
+      "max_size": 67108864,
+      "validator": "zip"
+    },
+    {
+      "id": "rar",
+      "name": "RAR archive",
+      "mime": "application/vnd.rar",
+      "extensions": ["rar"],
+      "header_hex": "526172211A0700",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    },
+    {
+      "id": "rar5",
+      "name": "RAR5 archive",
+      "mime": "application/vnd.rar",
+      "extensions": ["rar"],
+      "header_hex": "526172211A070100",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    },
+    {
+      "id": "7z",
+      "name": "7-Zip archive",
+      "mime": "application/x-7z-compressed",
+      "extensions": ["7z"],
+      "header_hex": "377ABCAF271C",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    },
+    {
+      "id": "ole",
+      "name": "OLE compound document (legacy Office)",
+      "mime": "application/x-ole-storage",
+      "extensions": ["doc", "xls", "ppt"],
+      "header_hex": "D0CF11E0A1B11AE1",
+      "footer_hex": null,
+      "max_size": 33554432,
+      "validator": null
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite database",
+      "mime": "application/vnd.sqlite3",
+      "extensions": ["sqlite", "db", "sqlite3"],
+      "header_hex": "53514C69746520666F726D6174203300",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": "sqlite"
+    },
+    {
+      "id": "mp3_id3",
+      "name": "MP3 with ID3",
+      "mime": "audio/mpeg",
+      "extensions": ["mp3"],
+      "header_hex": "494433",
+      "footer_hex": null,
+      "max_size": 33554432,
+      "validator": "mp3"
+    },
+    {
+      "id": "wav",
+      "name": "WAVE audio",
+      "mime": "audio/wav",
+      "extensions": ["wav"],
+      "header_hex": "52494646",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": "wav"
+    },
+    {
+      "id": "flac",
+      "name": "FLAC audio",
+      "mime": "audio/flac",
+      "extensions": ["flac"],
+      "header_hex": "664C6143",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    },
+    {
+      "id": "mp4",
+      "name": "MP4 / MOV (ftyp)",
+      "mime": "video/mp4",
+      "extensions": ["mp4", "mov", "m4v"],
+      "header_hex": "66747970",
+      "header_offset": 4,
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": "mp4"
+    },
+    {
+      "id": "avi",
+      "name": "AVI video",
+      "mime": "video/x-msvideo",
+      "extensions": ["avi"],
+      "header_hex": "52494646",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": "avi"
+    },
+    {
+      "id": "mkv",
+      "name": "Matroska / WebM",
+      "mime": "video/x-matroska",
+      "extensions": ["mkv", "webm"],
+      "header_hex": "1A45DFA3",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    },
+    {
+      "id": "pst",
+      "name": "Outlook PST candidate",
+      "mime": "application/vnd.ms-outlook",
+      "extensions": ["pst"],
+      "header_hex": "2142444E",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    },
+    {
+      "id": "eml_from",
+      "name": "RFC822 email candidate",
+      "mime": "message/rfc822",
+      "extensions": ["eml"],
+      "header_hex": "46726F6D3A20",
+      "footer_hex": null,
+      "max_size": 4194304,
+      "validator": null
+    },
+    {
+      "id": "cr2",
+      "name": "Canon CR2 RAW",
+      "mime": "image/x-canon-cr2",
+      "extensions": ["cr2"],
+      "header_hex": "49492A00",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    },
+    {
+      "id": "rw2",
+      "name": "Panasonic RW2 RAW",
+      "mime": "image/x-panasonic-rw2",
+      "extensions": ["rw2"],
+      "header_hex": "49495500",
+      "footer_hex": null,
+      "max_size": 67108864,
+      "validator": null
+    }
+  ]
+}

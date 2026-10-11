@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing / coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Tooling
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Application runtime data (never commit recovered content)
+*.db
+*.sqlite
+*.sqlite3
+logs/
+recovery_output/
+acquisitions/
+sessions/
+support-bundles/
+
+# Disk images created locally (tests generate their own)
+*.dd
+*.img
+*.e01
+*.E01
+*.raw
+*.bin
+!tests/fixtures/**
+
+# Packaging
+*.spec.bak
+*.manifest
+*.exe
+
+# Secrets / local config
+.env
+config/local.toml
