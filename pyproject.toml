@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "usb-recovery-lab"
+version = "0.1.0"
+description = "USB Recovery Lab — safe, read-only recovery of deleted and lost files from USB pen drives and disk images."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "USB Recovery Lab contributors" }]
+keywords = ["data-recovery", "forensics", "usb", "fat", "ntfs", "exfat", "carving"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Recovery Tools",
+]
+dependencies = []
+
+[project.optional-dependencies]
+gui = ["PySide6>=6.6.0"]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+all = ["usb-recovery-lab[gui,dev]"]
+
+[project.scripts]
+usb-recovery = "usb_recovery.cli.main:main"
+usb-recovery-gui = "usb_recovery.gui.app:main"
+
+[project.urls]
+Documentation = "https://github.com/mrdineshpathro-dot/usb-recovery"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+usb_recovery = ["py.typed", "data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = [
+    "slow: longer-running tests",
+    "gui: requires PySide6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+ignore_missing_imports = true
+mypy_path = "src"

@@ -1,0 +1,70 @@
+# USB Recovery Lab — default configuration
+# Copy to config/local.toml to override. Never point destination at the source device.
+
+[safety]
+# Refuse to write recovered files onto the same physical device as the source.
+prevent_same_device = true
+# Require an explicit confirmation token for physical-device acquisition.
+require_device_confirmation = true
+# Never format, repair, or initialize a source device.
+forbid_destructive_commands = true
+# Maximum automatic retries against a failing sector before recording it as bad.
+bad_sector_retries = 3
+# Pause (seconds) between retries.
+bad_sector_retry_delay_s = 0.05
+# Warn when a source reports more than this many unreadable sectors.
+unstable_device_bad_sector_threshold = 64
+
+[imaging]
+block_size = 1048576
+checkpoint_every_bytes = 16777216
+hash_while_imaging = true
+# "zero" writes NUL bytes for unreadable sectors; "skip" leaves a hole if the OS allows it.
+bad_sector_policy = "zero"
+image_extension = ".dd"
+
+[scan]
+# quick | standard | deep
+default_profile = "standard"
+carve_window_bytes = 1048576
+max_carve_size_bytes = 67108864
+enable_metadata_recovery = true
+enable_carving = true
+enable_dedup = true
+# Worker threads for carving (1 = sequential). Physical devices should stay sequential.
+carve_workers = 1
+
+[recovery]
+no_overwrite = true
+recreate_directory_hierarchy = true
+verify_size = true
+hash_recovered = true
+collision_template = "{stem} ({n}){suffix}"
+# increment | hash | skip | fail
+collision_strategy = "increment"
+write_sidecars = false
+
+[flash]
+stop_after_bad = 0
+read_budget = 0
+adaptive_retries = true
+
+[workspace]
+default_columns = ["name", "original_path", "size", "file_type", "method", "status", "confidence"]
+
+[logging]
+level = "INFO"
+rotate_bytes = 1048576
+rotate_backups = 5
+# Logs never include file contents, only paths, offsets, hashes, and status.
+log_file_contents = false
+
+[gui]
+theme = "dark"
+language = "en"
+high_dpi = true
+
+[network]
+# Offline-first: the application never uploads recovered data.
+allow_network = false
+telemetry = false

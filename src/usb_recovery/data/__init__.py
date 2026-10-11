@@ -1,0 +1,1 @@
+"""Packaged data (signature database)."""
